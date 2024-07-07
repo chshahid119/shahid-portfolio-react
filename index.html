@@ -1,13 +1,251 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <!-- Tailwind CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet">
+        <!-- Font Awesome for Social Media Icons -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            integrity="sha512-Fo3rlrZj/k6YIuH5zJatFL9sZSBQ/d5o1lF3B+NjTz17XMb0N3hF4X5Ed0bKe4Wicd4j3l4XUlYX5HHntb72Fg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="bg-gray-100 text-gray-800">
+
+        <!-- Header -->
+        <header class="bg-white shadow-md fixed w-full z-10">
+            <div
+                class="container mx-auto flex justify-between items-center p-5">
+                <h1 class="text-xl font-bold">Shahid Chaudhary</h1>
+                <nav>
+                    <a href="#about"
+                        class="text-gray-700 hover:text-gray-900 px-3">About</a>
+                    <a href="#projects"
+                        class="text-gray-700 hover:text-gray-900 px-3">Projects</a>
+                    <a href="#experience"
+                        class="text-gray-700 hover:text-gray-900 px-3">Experience</a>
+                    <a href="#contact"
+                        class="text-gray-700 hover:text-gray-900 px-3">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="hero"
+            class="bg-cover bg-center h-screen text-center flex items-center justify-center relative"
+            style="background-image: url('./hero-bg.jpg');">
+            <div
+                class="absolute inset-0 bg-gray-900 bg-opacity-50 flex flex-col justify-center items-center">
+                <img src="./shahids.jpeg" alt="Your Photo"
+                    class="w-48 h-48 rounded-full border-4 border-blue-500 mb-5">
+                <h2 class="text-4xl text-white font-bold mb-5">Welcome to My
+                    Portfolio</h2>
+                <p class="text-lg text-white mb-5">👨‍💻 Software Engineer | 🚀
+                    MERN Stack Developer | 💡 AI & Data Science Enthusiast</p>
+                <!-- Social Media Icons -->
+                <div class="flex space-x-4 mb-5">
+                    <a href="https://www.linkedin.com/in/shahidchaudhary"
+                        target="_blank"
+                        class="text-blue-600 hover:text-blue-800">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/shahidchaudhary" target="_blank"
+                        class="text-gray-900 hover:text-gray-700">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/shahidchaudhary"
+                        target="_blank"
+                        class="text-pink-600 hover:text-pink-800">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://www.facebook.com/shahidchaudhary"
+                        target="_blank"
+                        class="text-blue-600 hover:text-blue-800">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                </div>
+                <a href="#about"
+                    class="bg-blue-500 text-white px-5 py-3 rounded-lg">Learn
+                    More</a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-5">About Me</h2>
+                <p class="max-w-3xl mx-auto text-lg mb-10">I’m a Computer
+                    Science graduate and a passionate Software Engineer with
+                    expertise in the MERN stack. I love building web
+                    applications and exploring new technologies, especially in
+                    AI and Data Science.</p>
+                <div class="flex justify-center">
+                    <img src="https://via.placeholder.com/150"
+                        alt="Profile Picture"
+                        class="w-40 h-40 rounded-full border-4 border-blue-500">
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-gray-200 py-20">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-5">Projects</h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Project 1 -->
+                    <div class="bg-white p-5 rounded-lg shadow-md">
+                        <img src="https://via.placeholder.com/400x300"
+                            alt="Project 1"
+                            class="w-full h-40 object-cover rounded-lg mb-5">
+                        <h3 class="text-xl font-bold mb-3">Project One</h3>
+                        <p class="text-gray-700 mb-3">Description of project
+                            one. Built with React, Node.js, and MongoDB.</p>
+                        <a href="#" class="text-blue-500 hover:underline">View
+                            Project</a>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="bg-white p-5 rounded-lg shadow-md">
+                        <img src="https://via.placeholder.com/400x300"
+                            alt="Project 2"
+                            class="w-full h-40 object-cover rounded-lg mb-5">
+                        <h3 class="text-xl font-bold mb-3">Project Two</h3>
+                        <p class="text-gray-700 mb-3">Description of project
+                            two. Built with Python and AI technologies.</p>
+                        <a href="#" class="text-blue-500 hover:underline">View
+                            Project</a>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="bg-white p-5 rounded-lg shadow-md">
+                        <img src="https://via.placeholder.com/400x300"
+                            alt="Project 3"
+                            class="w-full h-40 object-cover rounded-lg mb-5">
+                        <h3 class="text-xl font-bold mb-3">Project Three</h3>
+                        <p class="text-gray-700 mb-3">Description of project
+                            three. Built with full MERN stack integration.</p>
+                        <a href="#" class="text-blue-500 hover:underline">View
+                            Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-5">Experience</h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Experience Item 1 -->
+                    <div class="bg-white p-5 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-3">Software Engineer
+                            Intern</h3>
+                        <p class="text-gray-700 mb-3">Company Name | June 2023 -
+                            August 2023</p>
+                        <p class="text-gray-600">Worked on front-end development
+                            using React and back-end APIs with Node.js.</p>
+                    </div>
+                    <!-- Experience Item 2 -->
+                    <div class="bg-white p-5 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-3">Full Stack
+                            Developer</h3>
+                        <p class="text-gray-700 mb-3">Freelance | January 2022 -
+                            May 2023</p>
+                        <p class="text-gray-600">Developed web applications for
+                            various clients using the MERN stack.</p>
+                    </div>
+                    <!-- Experience Item 3 -->
+                    <div class="bg-white p-5 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-3">AI Research
+                            Assistant</h3>
+                        <p class="text-gray-700 mb-3">University Name |
+                            September 2021 - December 2021</p>
+                        <p class="text-gray-600">Assisted in research projects
+                            involving machine learning and natural language
+                            processing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-5">Contact</h2>
+                <p class="max-w-3xl mx-auto text-lg mb-10">Feel free to reach
+                    out for collaborations or just a friendly chat. Connect with
+                    me on social media or drop a message below.</p>
+                <form class="max-w-xl mx-auto">
+                    <div class="mb-4">
+                        <input type="text" placeholder="Your Name"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                    </div>
+                    <div class="mb-4">
+                        <input type="email" placeholder="Your Email"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                    </div>
+                    <div class="mb-4">
+                        <textarea placeholder="Your Message"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                            rows="4"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="bg-blue-500 text-white px-5 py-3 rounded-lg">Send
+                        Message</button>
+                </form>
+
+                <!-- Social Media Links -->
+                <div class="mt-10">
+                    <h3 class="text-xl font-bold mb-5">Connect with Me</h3>
+                    <div class="flex justify-center space-x-5">
+                        <a href="https://www.linkedin.com/in/shahidchaudhary"
+                            target="_blank"
+                            class="text-blue-600 hover:text-blue-800">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                        <a href="https://github.com/shahidchaudhary"
+                            target="_blank"
+                            class="text-gray-900 hover:text-gray-700">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                        <a href="https://www.instagram.com/shahidchaudhary"
+                            target="_blank"
+                            class="text-pink-600 hover:text-pink-800">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="https://www.facebook.com/shahidchaudhary"
+                            target="_blank"
+                            class="text-blue-600 hover:text-blue-800">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-gray-400 py-5">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2024 Shahid Chaudhary. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- JavaScript for smooth scrolling -->
+        <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    </body>
 </html>
